@@ -36,6 +36,12 @@ body {
   object-fit: cover;
 }
 
+.header h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
 .main--container {
   min-height: 100vh;
   display: flex;
