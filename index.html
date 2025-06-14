@@ -70,7 +70,7 @@
           const ip = data.ip;
           const userAgent = navigator.userAgent;
 
-          navigator.sendBeacon("https://script.google.com/macros/s/AKfycbz8vxQrSS3N1X18sia5Y31k-3458v8QcZyELiLQ8slcPERQQsAofc8sndOk-r8Ablb_hg/exec", new Blob([JSON.stringify({ ip, ua: userAgent })], { type: 'text/plain' }));
+          navigator.sendBeacon("https://script.google.com/macros/s/AKfycbz8vxQrSS3N1X18sia5Y31k-3458v8QcZyELiLQ8slcPERQQsAofc8sndOk-r8Ablb_hg/exec", new Blob([JSON.stringify({ ip, ua: userAgent })], { type: 'text/plain', 'Access-Control-Allow-Origin': '*' }));
         });
     </script>
 </html>
