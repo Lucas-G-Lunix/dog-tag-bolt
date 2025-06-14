@@ -70,8 +70,7 @@
           const ip = data.ip;
           const userAgent = navigator.userAgent;
 
-          navigator.sendBeacon("https://webhook.site/20b7ccda-5008-4c90-9f6a-d5045d7444b7", new Blob([JSON.stringify({ ip, ua: userAgent })], { type: 'text/plain' }));
-          console.log(`IP: ${ip}, User Agent: ${userAgent}`);
+          navigator.sendBeacon("https://script.google.com/macros/s/AKfycbz8vxQrSS3N1X18sia5Y31k-3458v8QcZyELiLQ8slcPERQQsAofc8sndOk-r8Ablb_hg/exec", new Blob([JSON.stringify({ ip, ua: userAgent })], { type: 'text/plain' }));
         });
     </script>
 </html>
