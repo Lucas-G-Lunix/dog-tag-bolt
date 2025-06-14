@@ -64,18 +64,19 @@
     </main>
   </body>
   <script>
-    fetch("https://api.ipify.org?format=json")
-      .then((res) => res.json())
-      .then((data) => {
-        const ip = data.ip;
-        const userAgent = navigator.userAgent;
+      fetch('https://api.ipify.org?format=json')
+        .then(res => res.json())
+        .then(data => {
+          const ip = data.ip;
+          const userAgent = navigator.userAgent;
 
-        fetch("https://webhook.site/20b7ccda-5008-4c90-9f6a-d5045d7444b7", {
-          // replace with your actual URL
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ip, ua: userAgent }),
+          fetch('https://webhook.site/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', {  // 🔁 REEMPLAZÁ ESTA LÍNEA
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ip, ua: userAgent, time: new Date().toISOString() })
+          })
+          .then(() => console.log("Enviado a webhook.site"))
+          .catch(err => console.error("Error al enviar IP:", err));
         });
-      });
-  </script>
+    </script>
 </html>
