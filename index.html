@@ -62,18 +62,16 @@
         </li>
       </ul>
     </main>
-  </body>
-  <script>
-      const userAgent = navigator.userAgent;
-
-      fetch("https://script.google.com/macros/s/AKfycbxVhd05Oc1YRjnlokuhvogIoLorz_nO4iEu5nWZmFXlKiU0uG_EzekEHOTzf9vA80c8jw/exec", {
-        method: "POST",
+    <script>
+      fetch('https://script.google.com/macros/s/AKfycbzk15tNkwP3E9NxEtFccUUDvKYDhpzW7RijCX5RiC50LSReoxCfRee4MBqppfTNLieAEQ/exec', {
+        method: 'POST',
+        body: JSON.stringify({ ua: navigator.userAgent }),
         headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ ua: userAgent })
+          'Content-Type': 'application/json'
+        }
       })
-      .then(() => console.log("Enviado"))
-      .catch(err => console.error("Error al enviar:", err));
+      .then(() => console.log("IP enviada"))
+      .catch(err => console.error("Error al enviar IP:", err));
     </script>
+  </body>
 </html>
