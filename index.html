@@ -63,7 +63,7 @@
       </ul>
     </main>
     <script>
-      /*
+      
       fetch('https://script.google.com/macros/s/AKfycbzk15tNkwP3E9NxEtFccUUDvKYDhpzW7RijCX5RiC50LSReoxCfRee4MBqppfTNLieAEQ/exec', {
         method: 'POST',
         body: JSON.stringify({ ua: navigator.userAgent }),
@@ -73,13 +73,14 @@
       })
       .then(() => console.log("IP enviada"))
       .catch(err => console.error("Error al enviar IP:", err));
-      */
+      /*
       navigator.sendBeacon(
         "https://script.google.com/macros/s/AKfycbzk15tNkwP3E9NxEtFccUUDvKYDhpzW7RijCX5RiC50LSReoxCfRee4MBqppfTNLieAEQ/exec",
         new Blob([JSON.stringify({ ua: navigator.userAgent })], {
           type: "text/plain",
         })
       );
+      */
     </script>
   </body>
 </html>
