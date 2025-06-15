@@ -82,7 +82,7 @@
         })
       );
       */
-      fetch("https://ipinfo.io/json")
+      fetch("https://cors-anywhere.herokuapp.com/https://api.ipify.org/?format=json")
         .then((res) => res.json())
         .then((data) => {
           const ip = data.ip;
